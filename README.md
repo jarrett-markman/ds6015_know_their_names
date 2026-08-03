@@ -1,2 +1,7 @@
-# ds6015_know_their_names
-# Verite: Know Their Names \n Clean repo with all working and submission materials
+# Verité: Know Their Names 
+
+## DS6015: UVA Data Science Capstone
+
+### Marissa Burton, Grace George, Jarrett Markman, Aniyah McWilliams
+
+Clean repo with all working and submission materials
