@@ -1,0 +1,3 @@
+# Ignore predictions and matches csv's - files are too large for git
+data/predictions.csv
+data/matches.csv
