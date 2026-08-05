@@ -5,7 +5,7 @@
 ### Marissa Burton, Grace George, Jarrett Markman, Aniyah McWilliams
 
 This pipeline links individuals across the 1870 and 1880 Albemarle County census
-records using probabilistic record linkage (Fellegi-Sunter/Expectation-Maximization (**EM**), via the Splink package in ***python***), then boosts match confidence using known family relationships (*relative corroboration*), and
+records using probabilistic record linkage (Fellegi-Sunter/Expectation-Maximization (**EM**), via the Splink package in ***python***), then boosts match confidence using known relationships (*relative corroboration*), and
 evaluates the model results against a hand-labeled ground truth set.
 
 #### Directory structure
@@ -67,3 +67,6 @@ Output: `data/matches.csv`, `data/boosted_preds.parquet`
 Reads `data/boosted_preds.parquet` and `data/ground_truth.csv`. Evaluates
 matches against ground truth and generates plots (probability
 distributions, confidence comparisons, calibration).
+
+#### Citation
+Linacre, R., Lindsay, S., Manassis, T., Slade, Z., Hepworth, T., Kennedy, R., & Bond, A. (2022). Splink: Free software for probabilistic record linkage at scale. International Journal of Population Data Science, 7(3). https://doi.org/10.23889/ijpds.v7i3.1794
