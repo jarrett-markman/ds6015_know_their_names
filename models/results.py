@@ -22,12 +22,14 @@ data_subset = data.drop(['1870_line', '1880_line', 'unique_id_l', 'unique_id_r']
 # Density plot to show distribution of match probabilities
 plt.figure()
 sns.kdeplot(data_subset['match_probability'])
+plt.title("Distribution of Match Probabilities (subset of ground truth)")
 
 # Within data_subset, a majority of our probabilities are at a higher scale -
 # meaning that our EM model is confident in a lot of these candidates being matches.
 
 plt.figure()
 sns.kdeplot(preds['match_probability'])
+plt.title("Distribution of Match Probabilities (all data)")
 
 # On the other hand, in looking at the distribution for our match probabilities
 # from preds, our model has much less confidence in the probability values,
@@ -114,6 +116,7 @@ plt.plot([0, 1], [0, 1], linestyle='--', color='gray', label='Perfect calibratio
 plt.xlabel('Mean predicted probability')
 plt.ylabel('Observed fraction confidence=3')
 plt.legend()
+plt.title("Model Calibration Plot")
 
 # Our model's AUC = 0.937 indicates that our model is effective in discriminating
 # "true" matches ahead of non-matches. Further, an overall "accuracy" = 0.8198
