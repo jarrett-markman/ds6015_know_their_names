@@ -13,6 +13,11 @@ ground_truth = pd.read_csv("data/ground_truth.csv")
 ground_truth['id_1870'] = "ALB-CN-1870-" + ground_truth['1870_line'].astype(str)
 ground_truth['id_1880'] = "ALB-CN-1880-" + ground_truth['1880_line'].astype(str)
 
+# Plot the distribution of ground truth data
+plt.figure()
+sns.kdeplot(ground_truth['confidence'])
+plt.title("Distribution of Ground Truth Confidence")
+
 # Join matches on to ground truth data
 data = pd.merge(ground_truth, preds, how='left', left_on=['id_1870', 'id_1880'], right_on=['unique_id_l', 'unique_id_r'])
 
