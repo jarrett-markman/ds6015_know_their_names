@@ -25,6 +25,7 @@ evaluates the model results against a hand-labeled ground truth set.
 │   └── boosted_preds.parquet
 ├── eda/
 |   ├── mentions_eda.ipynb 
+|   ├── splink_record_match_draft.ipynb 
 |   └── assertions_eda.ipynb
 ├── models/
 │   ├── em_model.py
